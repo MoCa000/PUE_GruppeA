@@ -23,9 +23,18 @@ def load_data(file_path):
 
 
 if __name__ == "__main__":
-    data = load_data('activity.csv')
+    data = load_data('data/activity.csv')
     power_W = data['PowerOriginal']
     print(power_W)
     sorted_power_W = bubble_sort(power_W)
     print(sorted_power_W[::-1])
+
   
+"""
+    # Plotting the sorted data
+    plt.plot(sorted_power_W[::-1])
+    plt.title('Sorted Power Data')
+    plt.xlabel('Index')
+    plt.ylabel('Power (W)')
+    plt.show()
+"""
